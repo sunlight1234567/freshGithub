@@ -1,0 +1,46 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{   /*int arr[20]={0};
+    int x=0,n;
+    scanf("%d",&n);
+    int i=0,temp=0,sum=0;
+    for(i=0;i<20;i++)
+    {
+        scanf("%d",&arr[i]);
+        temp=arr[i];
+        sum+=temp;
+        if(temp<0) x++;
+    }
+    cout<<x<<fixed<<setprecision(1)<<temp/20<<endl;*/
+    int a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20;
+    cin>>a1>>a2>>a3>>a4>>a5>>a6>>a7>>a8>>a9>>a10>>a11>>a12>>a13>>a14>>a15>>a16>>a17>>a18>>a19>>a20;
+    int i=0;
+    if(a1<0)i++;
+    if(a2<0)i++;
+    if(a3<0)i++;
+    if(a4<0)i++;
+    if(a5<0)i++;
+    if(a6<0)i++;
+    if(a7<0)i++;
+    if(a8<0)i++;
+    if(a9<0)i++;
+    if(a10<0)i++;
+    if(a11<0)i++;
+    if(a12<0)i++;
+    if(a13<0)i++;
+    if(a14<0)i++;
+    if(a15<0)i++;
+    if(a16<0)i++;
+    if(a17<0)i++;
+    if(a18<0)i++;
+    if(a19<0)i++;
+    if(a20<0)i++;
+    double sum;
+    sum=(a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17+a18+a19+a20)/20;
+    cout<<i<<" "<<fixed<<setprecision(1)<<sum<<endl;
+
+    return 0;
+}
