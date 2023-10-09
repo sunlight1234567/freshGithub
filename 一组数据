@@ -1,0 +1,17 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{   int num[20],i=0,j=0;
+double sum=0;
+    while(cin>>num[i])
+    {
+        if(num[i]<0) j++;
+        sum+=num[i];
+        i++;
+    }
+    cout<<j<<" "<<fixed<<setprecision(1)<<sum/20<<endl;
+
+    return 0;
+}
