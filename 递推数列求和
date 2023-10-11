@@ -1,0 +1,23 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+    double a=0,b=0,m=0,sum=0;//m用于临时储存a的值
+    int N,n=1;
+    while(cin>>N)
+    {if(N==0) {cout<<fixed<<setprecision(6)<<sum<<endl;break;}//被n=0搞死
+        n=1;sum=0;m=0;//变量回归初始值
+    if(n==1) {a=2;b=1;sum+=a/b;n++;}
+
+        while(n>=2&&n<=N)
+        {
+            m=a;
+            a+=b;
+            b=m;
+            sum+=a/b;
+            n++;
+        }
+     cout<<fixed<<setprecision(6)<<sum<<endl;
+    }
+}
