@@ -1,0 +1,29 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+    int c[100]={0},i,N,n,B,x,y;
+    int max,out;//a[i]为出现的次数，b[i]为出现的先后，c[i]为出现的数字内容
+    while(cin>>N)
+    {i=0;n=2;max=0;int a[100]={1,1,1,1,1,1,1};int b[100]={0};
+        cin>>x;
+        while(n<=N)
+        {   cin>>y;
+            if(y==x){a[i]+=1;}
+            else {b[i]=i,c[i]=x;i++;a[i]=1;x=y;}
+            n++;
+        }
+    max=0;b[i]=i;c[i]=x;
+
+
+    for(i=0;i<N;i++)
+    {
+        if(a[i]>max||a[i]==max&&b[i]<B) {max=a[i];B=b[i];out=c[i];}
+
+    }
+    cout<<out<<" "<<max<<endl;
+    }
+return 0;
+}
+
