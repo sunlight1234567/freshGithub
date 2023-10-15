@@ -1,0 +1,26 @@
+#include<iostream>
+#include<iomanip>
+#include<cstdio>
+using namespace std;
+int main()
+{
+    double a[100],ave;
+    int i,n,j=0;
+    while(cin>>n)
+    {j=0;ave=0;//每次循环赋初值很关键
+      for(i=0;i<n;i++)
+        {
+        cin>>a[i];
+        ave+=a[i];
+        }
+        ave/=n;
+        for(i=0;i<n;i++)
+        {
+            if(a[i]>=ave) j++;
+        }
+        cout<<fixed<<setprecision(6)<<ave<<" "<<j<<'\n';
+    }
+
+return 0;
+}
+
