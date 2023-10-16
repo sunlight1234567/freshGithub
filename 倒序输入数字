@@ -1,0 +1,31 @@
+#include<iostream>
+#include<iomanip>
+#include<cstdio>
+using namespace std;
+int main()
+{
+    int N,n,m,i,a;//N为输入；n为从1开始的数，并判断是否符合条件；m为n的倒序数；i用于计算符合条件的n算了多少个，i=N时的n为所需输出值
+    while(cin>>N)
+    {i=0;
+        if(N>=1&&N<=11)//前11个直接输出
+        {
+            cout<<N<<endl;
+            continue;
+        }
+        for(n=1; n<100000; n++）//100000足够大，保证能计算到第N个
+        {
+            a=n;
+            m=a%10;
+            a/=10;
+            while(a!=0)
+            {
+                m=10*m+a%10;
+                a/=10;
+            }                          //n倒序输入m
+            if(m%n==0||n%m==0) i++;
+            if(i==N) {cout<<n<<endl;break;}
+        }
+    }
+    return 0;
+}
+
