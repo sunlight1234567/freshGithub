@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c[20]={0},i,j,sum;//赋初值可以避免错误
+    while(cin>>a>>b)
+    {
+        if(a==0||b==0){cout<<a<<"*"<<b<<"="<<0<<"="<<0<<endl;continue;}
+            i=0;sum=0;
+        cout<<a<<"*"<<b<<"=";
+        while(a>=1)
+        {
+            if(a%2!=0){c[i]=b;i++;}
+            a/=2;b*=2;
+        }
+        cout<<c[0];
+        sum=c[0];
+        for(j=1;j<i;j++)
+        {
+            cout<<"+"<<c[j];
+            sum+=c[j];
+        }
+        cout<<"="<<sum<<endl;
+    }
+    return 0;
+}
