@@ -1,0 +1,37 @@
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+
+int main ()
+{
+    int a[20]= {0};
+    int N,L1,L2;
+    while(cin>>N>>L1>>L2)
+    {
+        for(int i=0; i<N; i++)cin>>a[i]; //输入数据到a数组
+        int sum=0,Max=0;
+        for(int i=L1;i<=L2;i++)//i是累加的数的个数，从L1开始
+        {
+            for(int j=0;j<N;j++)//j为开始累加的元素的下标
+            {sum=0;
+                for(int k=0;k<i;k++)//k为累加次数计数
+                {
+                    sum+=a[j+k];
+
+                }
+                if(i==L1&&j==0) Max=sum;//第一次和赋给sum
+                if(sum>Max)Max=sum;
+            }
+        }
+        cout<<Max<<endl;
+
+
+    }
+
+
+
+
+    return 0;
+}
+
